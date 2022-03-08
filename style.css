@@ -1,0 +1,16 @@
+#display {
+    max-height: 50px;
+    min-height: 50px;
+    min-width: 300px;
+    max-width: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#answer-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: end;
+}

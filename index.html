@@ -6,16 +6,26 @@
     </head>
     <body>
         <div id="container">
-            <button class="digit" id="zero" type="submit">0</button>
-            <button class="digit" id="one" type="submit">1</button>
-            <button class="digit" id="two" type="submit">2</button>
-            <button class="digit" id="three" type="submit">3</button>
-            <button class="digit" id="four" type="submit">4</button>
-            <button class="digit" id="five" type="submit">5</button>
-            <button class="digit" id="six" type="submit">6</button>
-            <button class="digit" id="seven" type="submit">7</button>
-            <button class="digit" id="eight" type="submit">8</button>
-            <button class="digit" id="nine" type="submit">9</button>
+            <section id="display">
+                <div id="answer-input">
+                    <div id="answer-display">123</div>
+                    <div id="input-display">0</div>                    
+                </div>
+            </section>
+            <button class="fn" id="clear">clear</button>
+            <section id="digits">
+                <button class="digit" data-id="1" id="one" type="submit">1</button>
+                <button class="digit" data-id="2" id="two" type="submit">2</button>
+                <button class="digit" data-id="3" id="three" type="submit">3</button>
+                <button class="digit" data-id="4" id="four" type="submit">4</button>
+                <button class="digit" data-id="5" id="five" type="submit">5</button>
+                <button class="digit" data-id="6" id="six" type="submit">6</button>
+                <button class="digit" data-id="7" id="seven" type="submit">7</button>
+                <button class="digit" data-id="8" id="eight" type="submit">8</button>
+                <button class="digit" data-id="9" id="nine" type="submit">9</button>                
+            </section>
+            <button class="digit" data-id="0" id="zero" type="submit">0</button>
+            <!-- <button class="digit" id="dot" type="submit">.</button> -->
             <button class="operator" id="add" type="submit">+</button>
             <button class="operator" id="subtract" type="submit">-</button>
             <button class="operator" id="multiply" type="submit">x</button>
