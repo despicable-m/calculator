@@ -1,11 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Righteous&display=swap');
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    border: 1px solid black;
+    background: black;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
 #display {
     max-height: 50px;
-    min-height: 50px;
+    min-height: 150px;
     min-width: 300px;
     max-width: 300px;
-    border: 1px solid black;
     display: flex;
     justify-content: flex-end;
+    background: blanchedalmond;
+    border-radius: 5px;
 }
 
 #answer-input {
@@ -13,8 +28,55 @@
     flex-direction: column;
     justify-content: flex-end;
     text-align: end;
+    margin: 5px;
 }
 
 #input-display {
     height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 30px;
+    font-family: 'Graduate', cursive;
+}
+
+#answer-display {
+    font-size: 50px;
+    font-family: 'Graduate', cursive;
+}
+
+#digits {
+    width: 300px;
+    height: fit-content;
+    padding: 3px;
+    background: black;
+}
+
+.row {
+    width: 300px;
+    height: 65px;
+    display: flex;
+    margin: 3px 0;
+    gap: 3px;
+}
+
+.digit, .operator {
+    flex-grow: 1;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+#equal{
+    flex-grow: 2.4;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.fn {
+    flex-grow: 1.5;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
 }
