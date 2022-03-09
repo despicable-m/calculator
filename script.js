@@ -2,11 +2,15 @@ const inputDisplay = document.querySelector('#input-display');
 const answerDisplay = document.querySelector('#answer-display');
 const nums = document.querySelectorAll('.digit');
 const operators = document.querySelectorAll('.operator');
+const dot = document.querySelector('#dot')
 
 let initValue = 0;
 let newVal = 0;
 let result = 0;
 let operator = '';
+
+// Disables dot button when the input screen has a dot.
+dot.addEventListener('click', () => dot.disabled = true);
 
 // Does additions
 function add(firstVal, secondVal) {
@@ -67,6 +71,7 @@ clear.addEventListener('click', () => {
     answerDisplay.textContent = '';
     initValue = 0;
     operator = '';
+    dot.disabled = false;
 });
 
 // Calls operate when equal is pressed
@@ -76,6 +81,7 @@ equal.addEventListener('click', () => {
     answerDisplay.textContent = operate(initValue, newVal, operator);
     initValue = operate(initValue, newVal, operator);
     operator = '';
+    dot.disabled = false;
 });
 
 // Gets operator and changes initial values to what's on the screen
@@ -88,6 +94,7 @@ function getOperator(e) {
     console.log(initValue)
     operator = e.target.id;
     inputDisplay.textContent = '';
+    dot.disabled = false;
 }
 
 // Identifies operator
