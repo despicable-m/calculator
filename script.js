@@ -2,7 +2,8 @@ const inputDisplay = document.querySelector('#input-display');
 const answerDisplay = document.querySelector('#answer-display');
 const nums = document.querySelectorAll('.digit');
 const operators = document.querySelectorAll('.operator');
-const dot = document.querySelector('#dot')
+const dot = document.querySelector('#dot');
+const del = document.querySelector('#del');
 
 let initValue = 0;
 let newVal = 0;
@@ -11,6 +12,15 @@ let operator = '';
 
 // Disables dot button when the input screen has a dot.
 dot.addEventListener('click', () => dot.disabled = true);
+
+// Deletes latest entry
+del.addEventListener('click', () => {
+    if (!isNaN(parseFloat(inputDisplay.textContent))) {
+        inputDisplay.textContent = inputDisplay.
+                                    textContent.
+                                    substring(0, inputDisplay.textContent.length - 1);
+    }
+})
 
 // Does additions
 function add(firstVal, secondVal) {
