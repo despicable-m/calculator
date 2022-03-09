@@ -31,19 +31,24 @@ function divide (firstVal, secondVal) {
 // Calls an operation on numbers
 function operate(firstVal, secondVal, operator) {
     inputDisplay.textContent = '';
-    if (operator === 'add') {
-        return add(parseFloat(firstVal), parseFloat(secondVal));
+    if (operator === 'divide' && parseFloat(secondVal) === 0) {
+        return 'ERR!!!'
+    } else {
+        if (operator === 'add') {
+            return add(parseFloat(firstVal), parseFloat(secondVal));
+        }
+        else if (operator === 'subtract') {
+            return subtract(parseFloat(firstVal), parseFloat(secondVal));
+        }
+        else if (operator === 'multiply') {
+            return multiply(parseFloat(firstVal), parseFloat(secondVal));
+        }
+        else if (operator === 'divide') {
+            return divide(parseFloat(firstVal), parseFloat(secondVal));
+        }
+        else return initValue;        
     }
-    else if (operator === 'subtract') {
-        return subtract(parseFloat(firstVal), parseFloat(secondVal));
-    }
-    else if (operator === 'multiply') {
-        return multiply(parseFloat(firstVal), parseFloat(secondVal));
-    }
-    else if (operator === 'divide') {
-        return divide(parseFloat(firstVal), parseFloat(secondVal));
-    }
-    else return add(parseFloat(firstVal), parseFloat(secondVal))
+
 }
 
 // Populates calculator screen
@@ -70,6 +75,7 @@ const equal = document.querySelector('#equal');
 equal.addEventListener('click', () => {
     answerDisplay.textContent = operate(initValue, newVal, operator);
     initValue = operate(initValue, newVal, operator);
+    operator = '';
 });
 
 // Gets operator and changes initial values to what's on the screen
