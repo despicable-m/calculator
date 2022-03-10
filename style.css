@@ -67,11 +67,20 @@
     font-size: 20px;
 }
 
+.digit {
+    background: #A1887F;
+}
+
+.operator {
+    background: #FDD835;
+}
+
 #equal{
     flex-grow: 2.4;
     border: none;
     border-radius: 5px;
     font-size: 20px;
+    background: #FFB300;
 }
 
 .fn {
@@ -79,4 +88,22 @@
     border: none;
     border-radius: 5px;
     font-size: 20px;
+}
+
+#dot {
+    background: #B0BEC5;
+    font-size: 20px;
+    color: black;
+}
+
+#dot:disabled {
+    background: #B0BEC5;
+}
+
+#clear {
+    background: #E65100;
+}
+
+#del {
+    background: #F57C00;
 }

@@ -101,7 +101,6 @@ function getOperator(e) {
     answerDisplay.textContent = initValue;        
     }
 
-    console.log(initValue)
     operator = e.target.id;
     inputDisplay.textContent = '';
     dot.disabled = false;
